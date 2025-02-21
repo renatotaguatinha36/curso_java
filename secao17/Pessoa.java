@@ -24,4 +24,10 @@ public class Pessoa {
         return idade;
     }
 
+
+    public Pessoa(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+
 }
