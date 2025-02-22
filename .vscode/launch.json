@@ -6,6 +6,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "TesteScanner",
+      "request": "launch",
+      "mainClass": "secao2.TesteScanner",
+      "projectName": "curso_java_ef153258"
+    },
+    {
+      "type": "java",
+      "name": "MediaAluno",
+      "request": "launch",
+      "mainClass": "secao4_media.MediaAluno",
+      "projectName": "curso_java_ef153258"
+    },
+    {
+      "type": "java",
+      "name": "CalculadoraIMC",
+      "request": "launch",
+      "mainClass": "secao6_calcIMC.CalculadoraIMC",
+      "projectName": "curso_java_ef153258"
+    },
+    {
+      "type": "java",
       "name": "HelloWorld",
       "request": "launch",
       "mainClass": "secao1.HelloWorld",
