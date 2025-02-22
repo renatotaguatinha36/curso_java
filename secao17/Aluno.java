@@ -5,7 +5,7 @@ public class Aluno {
     
     private String nome;
     // private int matricula;
-    private double notaFinal;
+    private Double notaFinal;
 
 
     public Aluno() {
