@@ -11,11 +11,11 @@ try {
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
   echo "Connected successfully";
-  $stmt = $conn->prepare("SELECT FROM * pessoas");
+  $stmt = $conn->prepare("SELECT *FROM  pessoas");
   // set the resulting array to associative
   $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
   while($row  = $stmt->fetchAll()) {
-    echo $row;
+    echo "Resultados :" . ($row);
   }
 
 } catch(PDOException $e) {
