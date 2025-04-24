@@ -1,10 +1,15 @@
 package secao17;
 
+
 public class Aluno {
     
     private String nome;
     // private int matricula;
-    private double notaFinal;
+    private Double notaFinal;
+
+
+    public Aluno() {
+    }
 
     public Aluno(String nome, int matricula, double notaFinal) {
         this.nome = nome;
@@ -22,6 +27,15 @@ public class Aluno {
         } else {
             System.out.println("Nome inválido.");
         }
+    }
+
+
+    @Override
+    public String toString() {
+        return "{" +
+            " nome='" + getNome() + "'" +
+            ", notaFinal='" + getNotaFinal() + "'" +
+            "}";
     }
 
     public double getNotaFinal() {

@@ -1,5 +1,5 @@
 package secao1;
-
+import java.util.ArrayList;
 /**
  * HelloWorld
  */
@@ -7,7 +7,13 @@ public class HelloWorld {
 
     public static void main(String[] args) {
         
-        System.out.println("Olá Mundo! 2");
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
+    cars.add("Mazda");
+    cars.add("porshe");
+    System.out.println(cars);
 
     }
     

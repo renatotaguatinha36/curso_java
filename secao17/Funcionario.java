@@ -6,6 +6,9 @@ public class Funcionario {
     protected double salario;
     private String senha;
 
+    public Funcionario() {
+    }
+
 
     public Funcionario(String nome, double salario, String senha) {
 
