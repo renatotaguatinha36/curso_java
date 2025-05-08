@@ -34,6 +34,7 @@ try {
 
   echo "Connection failed: " . $e->getMessage();
   echo "Connection failed: " . $e->getTraceAsString();
+  throw new Exception("Division by zero");
   die($e->getMessage());
 
 }
