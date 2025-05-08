@@ -16,6 +16,7 @@ try {
   $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
   while($row  = $stmt->fetchAll()) {
     echo "Resultados :" . ($row) . "\n\n\n";
+    printf("%%s = '%s'\n", $n); // representação em string
     
   }
 
