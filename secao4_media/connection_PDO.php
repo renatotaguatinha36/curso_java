@@ -1,9 +1,13 @@
 <?php
 
+
+
 $servername = "localhost";
 $username = "username";
 $password = "password";
 
+
+$email - filter_var($POST['email'],FILTER_SANITIZE_EMAIL);
 try {
 
   $conn = new PDO ("mysql:host=$servername;dbname=myDB", $username, $password);
