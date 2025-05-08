@@ -15,7 +15,8 @@ try {
   // set the resulting array to associative
   $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
   while($row  = $stmt->fetchAll()) {
-    echo "Resultados :" . ($row);
+    echo "Resultados :" . ($row) . "\n\n\n";
+    
   }
 
 } catch(PDOException $e) {
