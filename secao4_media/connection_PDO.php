@@ -7,7 +7,7 @@ $username = "username";
 $password = "password";
 
 
-$email - filter_var($POST['email'],FILTER_SANITIZE_EMAIL);
+$email = filter_var($POST['email'],FILTER_SANITIZE_EMAIL) ?? "Email não Informado";
 try {
 
   $conn = new PDO ("mysql:host=$servername;dbname=myDB", $username, $password);
