@@ -37,7 +37,7 @@ try {
 
 }
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-  echo $row["id"]."--".$row["firstname"]."--".$row["lastname"]."<\br>";
+  echo $row["id"]."--".$row["firstname"]."--".$row["lastname"]. "--" . $row["email"] . "<\br>";
   echo "\n\n\n";
 }
 
