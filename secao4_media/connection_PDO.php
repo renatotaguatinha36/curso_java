@@ -12,9 +12,9 @@ try {
   $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
   echo "Connected successfully";
   $stmt = $conn->prepare("INSERT INTO MyGuests (firstname, lastname, email) VALUES (:firstname, :lastname, :email)");
-  $stmt->bindParam(':firstname', $firstname);
-  $stmt->bindParam(':lastname', $lastname);
-  $stmt->bindParam(':email', $email);
+  $stmt->bindParam(':firstname', $firstname, PDO::PARAM_STR);
+  $stmt->bindParam(':lastname', $lastname, PDO::PARAM_STR);
+  $stmt->bindParam(':email', $email, PDO::PARAM_STR);
 
   $stmt = $conn->prepare("SELECT *FROM  pessoas");
   // set the resulting array to associative
