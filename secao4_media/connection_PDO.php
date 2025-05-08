@@ -6,7 +6,7 @@ $servername = "localhost";
 $username = "username";
 $password = "password";
 
-
+$firstName = filter_var($_POST["nome"], FILTER_SANITIZE_SPECIAL_CHARS) ?? "Nome não Informado";
 $email = filter_var($POST['email'],FILTER_SANITIZE_EMAIL) ?? "Email não Informado";
 try {
 
