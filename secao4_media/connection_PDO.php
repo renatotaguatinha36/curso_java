@@ -2,6 +2,7 @@
 
 include "./header.php"; //Se não achar gera Warning e continua normalmente
 require "./header.php"; // Se não achar gera Erro fatal
+
 session_start();
 session_destroy();
 setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day                                                                                                                                                                                                    
