@@ -1,24 +1,20 @@
 <?php
 
+
+include "./connectionBase.php";
 include "./header.php"; //Se não achar gera Warning e continua normalmente
 require "./header.php"; // Se não achar gera Erro fatal
 
 session_start();
 session_destroy();
 setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day                                                                                                                                                                                                    
-$servername = "localhost";
-$username = "username";
-$password = "password";
+
 
 $firstName = htmlspecialchars($_POST["nome"], FILTER_SANITIZE_SPECIAL_CHARS) ?? "Nome não Informado";
 $email = filter_var($POST['email'],FILTER_SANITIZE_EMAIL) ?? "Email não Informado";
 try {
 
-  $conn = new PDO ("mysql:host=$servername;dbname=myDB", $username, $password);
-  // set the PDO error mode to exception
-  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-  echo "Connected successfully";
+  
   $stmt = $conn->prepare("INSERT INTO MyGuests (firstname, lastname, email) VALUES (:firstname, :lastname, :email)");
   $stmt->bindParam(':firstname', $firstname, PDO::PARAM_STR);
   $stmt->bindParam(':lastname', $lastname, PDO::PARAM_STR);
