@@ -1,8 +1,10 @@
 <?php
 
+include "./header.php"; //Se não achar gera Warning
+require "./header.php"; // Se não achar gera Erro fatal
 session_start();
 session_destroy();
-setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day                                                                                                                                                                                                    
 $servername = "localhost";
 $username = "username";
 $password = "password";
