@@ -1,6 +1,6 @@
 <?php
 
-include "./header.php"; //Se não achar gera Warning
+include "./header.php"; //Se não achar gera Warning e continua normalmente
 require "./header.php"; // Se não achar gera Erro fatal
 session_start();
 session_destroy();
