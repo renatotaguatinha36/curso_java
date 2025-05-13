@@ -19,8 +19,10 @@ try {
   $stmt->bindParam(':firstname', $firstname, PDO::PARAM_STR);
   $stmt->bindParam(':lastname', $lastname, PDO::PARAM_STR);
   $stmt->bindParam(':email', $email, PDO::PARAM_STR);
-  $stmt->execute();
+  
   $stmt = $conn->prepare("SELECT *FROM  pessoas");
+
+  $stmt->execute();
   // set the resulting array to associative
   $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
   while($row  = $stmt->fetchAll()) {
