@@ -20,11 +20,11 @@ try {
   $stmt->bindParam(':lastname', $lastname, PDO::PARAM_STR);
   $stmt->bindParam(':email', $email, PDO::PARAM_STR);
   
-  $stmt = $conn->prepare("SELECT *FROM  pessoas");
+  $stmt = $conn->prepare("SELECT *FROM  MyGuests");
 
   $stmt->execute();
   // set the resulting array to associative
-  $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+  $stmt->setFetchMode(PDO::FETCH_ASSOC);
   while($row  = $stmt->fetchAll()) {
     echo "Resultados :" . ($row) . "\n\n\n";
     printf("%%s = '%s'\n", $n); // representação em string
