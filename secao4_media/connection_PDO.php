@@ -14,8 +14,8 @@ $firstName = htmlspecialchars($_POST["nome"], FILTER_SANITIZE_SPECIAL_CHARS) ?? 
 $email = filter_var($POST['email'],FILTER_SANITIZE_EMAIL) ?? "Email não Informado";
 try {
 
-  
-  $stmt = $conn->prepare("INSERT INTO MyGuests (firstname, lastname, email) VALUES (:firstname, :lastname, :email)");
+  $query = "INSERT INTO MyGuests (firstname, lastname, email) VALUES (:firstname, :lastname, :email)";
+  $stmt = $conn->prepare($query);
   $stmt->setFetchMode(PDO::FETCH_ASSOC);
   $stmt->bindParam(':firstname', $firstname, PDO::PARAM_STR);
   $stmt->bindParam(':lastname', $lastname, PDO::PARAM_STR);
