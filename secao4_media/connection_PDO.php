@@ -20,7 +20,7 @@ try {
   $stmt->bindParam(':lastname', $lastname, PDO::PARAM_STR);
   $stmt->bindParam(':email', $email, PDO::PARAM_STR);
   
-  $stmt = $conn->prepare("SELECT *FROM  MyGuests");
+  $stmt = $conn->prepare("SELECT * FROM  MyGuests");
 
   $stmt->execute();
   // set the resulting array to associative
