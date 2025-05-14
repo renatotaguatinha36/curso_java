@@ -16,6 +16,7 @@ try {
 
   
   $stmt = $conn->prepare("INSERT INTO MyGuests (firstname, lastname, email) VALUES (:firstname, :lastname, :email)");
+  $stmt->setFetchMode(PDO::FETCH_ASSOC);
   $stmt->bindParam(':firstname', $firstname, PDO::PARAM_STR);
   $stmt->bindParam(':lastname', $lastname, PDO::PARAM_STR);
   $stmt->bindParam(':email', $email, PDO::PARAM_STR);
@@ -24,7 +25,7 @@ try {
 
   $stmt->execute();
   // set the resulting array to associative
-  $stmt->setFetchMode(PDO::FETCH_ASSOC);
+  
   while($row  = $stmt->fetchAll()) {
     echo "Resultados :" . ($row) . "\n\n\n";
     printf("%%s = '%s'\n", $n); // representação em string
