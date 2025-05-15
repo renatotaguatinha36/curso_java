@@ -50,10 +50,9 @@ try {
 }
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
    echo "<table>";
-   
-
+  
   echo "<tr><th>" . $row["id"]."</th><th>".$row["firstname"]."</th><th>".$row["lastname"]. "</th><th>" . $row["email"] . "</th></tr>";
-  echo "\n\n\n";
+  
 }
  echo "</table>";
 
