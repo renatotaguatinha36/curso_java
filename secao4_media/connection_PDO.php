@@ -12,6 +12,7 @@ setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1
 
 $firstName = htmlspecialchars($_POST["nome"], FILTER_SANITIZE_SPECIAL_CHARS) ?? "Nome não Informado";
 $email = filter_var($POST['email'],FILTER_SANITIZE_EMAIL) ?? "Email não Informado";
+
 try {
 
   $query = "INSERT INTO MyGuests (firstname, lastname, email) VALUES (:firstname, :lastname, :email)";
@@ -21,7 +22,7 @@ try {
   $stmt->bindParam(':lastname', $lastname, PDO::PARAM_STR);
   $stmt->bindParam(':email', $email, PDO::PARAM_STR);
   
-  $stmt = $conn->prepare("SELECT * FROM  MyGuests");
+  $stmt = $conn->prepare("SELECT * FROM MyGuests WHERE usuario = :user AND senha = :pass ");
 
   $stmt->execute();
   // set the resulting array to associative
