@@ -32,7 +32,7 @@ try {
   // Prepare statement
   $stmt = $conn->prepare($sql);
   $stmt->execute();
-  
+
   while($row  = $stmt->fetchAll()) {
     echo "Resultados :" . ($row) . "\n\n\n";
     printf("%%s = '%s'\n", $n); // representação em string
@@ -49,9 +49,10 @@ try {
 
 }
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+   echo "<table><tr><th>firstname</th><th>lastname</th></tr>";
   echo $row["id"]."--".$row["firstname"]."--".$row["lastname"]. "--" . $row["email"] . "<\br>";
   echo "\n\n\n";
 }
-
+ echo "</table>";
 
 ?>
