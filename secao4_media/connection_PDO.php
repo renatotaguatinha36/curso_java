@@ -27,6 +27,10 @@ try {
 
   $stmt->execute();
   // set the resulting array to associative
+  $sql = "UPDATE MyGuests SET lastname='Doe' WHERE id=2";
+
+  // Prepare statement
+  $stmt = $conn->prepare($sql);
   
   while($row  = $stmt->fetchAll()) {
     echo "Resultados :" . ($row) . "\n\n\n";
