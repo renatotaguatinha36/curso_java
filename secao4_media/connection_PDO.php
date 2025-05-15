@@ -22,6 +22,7 @@ try {
   $stmt->bindParam(':lastname', $lastname, PDO::PARAM_STR);
   $stmt->bindParam(':email', $email, PDO::PARAM_STR);
   
+  // login
   $stmt = $conn->prepare("SELECT * FROM MyGuests WHERE usuario = :user AND senha = :pass ");
 
   $stmt->execute();
