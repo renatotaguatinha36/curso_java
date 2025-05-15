@@ -51,8 +51,8 @@ try {
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
    echo "<table>";
    echo "<tr><th>firstname</th><th>lastname</th><th>email</th></tr>";
-   
-  echo $row["id"]."--".$row["firstname"]."--".$row["lastname"]. "--" . $row["email"] . "<\br>";
+
+  echo "<tr><td>" . $row["id"]."</td><td>".$row["firstname"]."</td></tr>".$row["lastname"]. "--" . $row["email"] . "<\br>";
   echo "\n\n\n";
 }
  echo "</table>";
