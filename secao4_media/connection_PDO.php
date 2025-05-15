@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
   <title>Documento</title> 
-
+     <div class="container-fluid">
 <?php
 
 
@@ -66,5 +66,5 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
  echo "</table>";
 
 ?>
-
+     </div>
 </html>
