@@ -31,6 +31,7 @@ try {
 
   // Prepare statement
   $stmt = $conn->prepare($sql);
+  $stmt->execute();
   
   while($row  = $stmt->fetchAll()) {
     echo "Resultados :" . ($row) . "\n\n\n";
