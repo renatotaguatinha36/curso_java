@@ -59,13 +59,14 @@ try {
 
 }
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+  echo '<div class="table-responsive">';
    echo '<table class="table">';
   
   echo "<tr><th>" . $row["id"]."</th><th>".$row["firstname"]."</th><th>".$row["lastname"]. "</th><th>" . $row["email"] . "</th></tr>";
   
 }
  echo "</table>";
-
+ echo "</div>";
 ?>
      </div>
 </html>
